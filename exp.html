@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Preparation Companion</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Exam Preparation Companion</h1>
+        <p>Your personalized guide to mastering topics</p>
+    </header>
+
+    <main>
+        <section id="topic-selection">
+            <h2>Select Your Topics</h2>
+            <form id="topic-form">
+                <label for="topic">Choose a Topic:</label>
+                <select id="topic" name="topic">
+                    <option value="math">Mathematics</option>
+                    <option value="physics">Physics</option>
+                    <option value="chemistry">Chemistry</option>
+                    <option value="history">History</option>
+                </select>
+                <button type="submit">Get Insights</button>
+            </form>
+        </section>
+
+        <section id="insights" style="display: none;">
+            <h2>Topic-Specific Insights</h2>
+            <div id="insight-content">
+                <!-- Insights will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Exam Prep Companion. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('topic-form');
+        const insightsSection = document.getElementById('insights');
+        const insightContent = document.getElementById('insight-content');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const topic = document.getElementById('topic').value;
+
+            try {
+                const response = await fetch('/get-insights', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ topic }),
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    insightContent.innerHTML = `<p>${data.insights}</p>`;
+                    insightsSection.style.display = 'block';
+                } else {
+                    insightContent.innerHTML = '<p>Error fetching insights. Please try again.</p>';
+                    insightsSection.style.display = 'block';
+                }
+            } catch (error) {
+                insightContent.innerHTML = '<p>Error connecting to the server. Please try again.</p>';
+                insightsSection.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

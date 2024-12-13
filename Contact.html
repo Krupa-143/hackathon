@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Smart Study Scheduler</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: linear-gradient(45deg, #4facfe, #0070f3);
+      color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffcb42;
+    }
+
+    /* Header Section */
+    .header {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(to bottom, #6a11cb, #2575fc);
+      color: white;
+    }
+
+    .header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 1.2em;
+    }
+
+    /* Contact Form Section */
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .contact-form {
+      width: 500px;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 10px;
+      background: #0070f3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #005bb5;
+    }
+
+    /* Contact Info Section */
+    .contact-info {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .contact-info img {
+      width: 50px;
+      margin: 10px;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+      font-size: 1.1em;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(to right, #4facfe, #0070f3);
+      color: white;
+      font-size: 0.9em;
+    }
+
+    footer a {
+      color: #ffcb42;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1>Smart Study Scheduler</h1>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Features.html">Features</a></li>
+      <li><a href="Pricing.html">Pricing</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header Section -->
+  <div class="header">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you. Reach out to us with any questions or feedback!</p>
+  </div>
+
+  <!-- Contact Form Section -->
+  <div class="contact">
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="#" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <h2>Our Contact Details</h2>
+      <p><img src="https://via.placeholder.com/50" alt="Phone Icon"> Phone: +1 234 567 890</p>
+      <p><img src="https://via.placeholder.com/50" alt="Email Icon"> Email: support@smartstudy.com</p>
+      <p><img src="https://via.placeholder.com/50" alt="Location Icon"> Address: 123 Study Lane, Learn City, USA</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Smart Study Scheduler. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
+</body>
+</html>
